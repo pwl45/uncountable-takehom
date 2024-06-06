@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+.App {
+    display: flex;
+    flex-direction: column; /* Stacks children vertically by default */
+    gap: 20px; /* Optional: Adds space between the children */
+    justify-content: center; /* Centers children along the main axis */
+    align-items: center; /* Ensures children are centered along the cross axis */
+    width: 100%; /* Ensures the container takes full width */
+}
+
+@media (min-width: 1350px) {
+    .App {
+        flex-direction: row; /* Aligns children horizontally on wider screens */
+        justify-content: space-around; /* Evenly distributes space around items, including between the edges and the items */
+        align-items: flex-start; /* Ensures children are centered along the cross axis */
+    }
+}
+
+.half-page-plot {
+    flex: 1; /* Each child will take equal space */
+    display: flex;
+    justify-content: center; /* Centers the content of 'half-page-plot' */
+    flex-direction: column; /* Stacks children vertically */
+    max-width: 50%; /* Optional: Prevents plots from growing too large */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.component-container {
+  width: 100%;
+  max-width: 600px; /* Adjust this value based on your desired maximum width */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.component-selector {
+  width: 100%;
+  padding: 8px;
+}

@@ -1,0 +1,36 @@
+.data-plotter-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.plot-controls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.controls-row {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.control-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.plot-display-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
