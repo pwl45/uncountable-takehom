@@ -40,7 +40,7 @@ function HistogramFilter({ data, position='left'}) {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
-    }, [keyBindings]); // Depend on position since it affects keys
+    }, [keyBindings]); // Include position in dependencies to re-run when/if keyBindings changes
 
     // Filter data based on output column range
     const filteredData = data.filter(row => 

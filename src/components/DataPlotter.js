@@ -30,7 +30,7 @@ function DataPlotter({ data, position='left'}) {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
-    }, [keyBindings]); // Include position in dependencies to handle updates
+    }, [keyBindings]); // Include position in dependencies to re-run when/if keyBindings changes
 
     const columnNames = data.length > 0 ? Object.keys(data[0]).map(key => ({ label: key, value: key })) : [];
 
