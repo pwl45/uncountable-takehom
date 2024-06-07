@@ -7,7 +7,7 @@ function DataPlotter({ data, position='left'}) {
     const [selectedX, setSelectedX] = useState('');
     const [selectedY, setSelectedY] = useState('');
 
-    // set inputKey to 'd' and outputKey to 'd' if the position is 'left', otherwise set inputKey to 'j' and outputKey to 'k'
+    // have keybindings be in the left hand if position is left, or right hand if position is right
     const keyBindings = {
         input: { key: position === 'left' ? 'd' : 'j', ref: useRef(null) },
         output: { key: position === 'left' ? 'f' : 'k', ref: useRef(null) }

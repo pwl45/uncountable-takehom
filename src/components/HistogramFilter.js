@@ -12,9 +12,11 @@ function HistogramFilter({ data, position='left'}) {
 
     // Extract column names for the dropdowns
     const columnNames = data.length > 0 ? Object.keys(data[0]).map(key => ({ label: key, value: key })) : [];
+
     const inputColumnNames = columnNames.filter(column => column.value.includes('(input)'));
     const outputColumnNames = columnNames.filter(column => column.value.includes('(output)'));
 
+    // have keybindings be in the left hand if position is left, or right hand if position is right
     const keyBindings = {
         input: { key: position === 'left' ? 'd' : 'j', ref: useRef(null) },
         output: { key: position === 'left' ? 'f' : 'k', ref: useRef(null) },
@@ -66,7 +68,7 @@ function HistogramFilter({ data, position='left'}) {
                         <FuzzySelect
                             // id="x-select-input"
                             ref={keyBindings.input.ref}
-                            options={inputColumnNames}
+                            options={inputColumnNames} // for the input column, only show input columns
                             onChange={option => setInputColumn(option.value)}
                             placeholder={`alt-${keyBindings.input.key.toUpperCase()} to focus...`}
                         />
@@ -76,7 +78,7 @@ function HistogramFilter({ data, position='left'}) {
                         <FuzzySelect
                             // id="x-select-input"
                             ref={keyBindings.output.ref}
-                            options={outputColumnNames}
+                            options={outputColumnNames} // for the output column, only show input columns
                             onChange={option => setOutputColumn(option.value)}
                             placeholder={`alt-${keyBindings.output.key.toUpperCase()} to focus...`}
                         />
