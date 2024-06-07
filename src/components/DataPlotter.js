@@ -6,8 +6,6 @@ import './Plot.css';
 function DataPlotter({ data, position='left'}) {
     const [selectedX, setSelectedX] = useState('');
     const [selectedY, setSelectedY] = useState('');
-    const xSelectInputRef = useRef(null); // Ref for the X-axis FuzzySelect component
-    const ySelectInputRef = useRef(null); // Ref for the Y-axis FuzzySelect component
 
     // set inputKey to 'd' and outputKey to 'd' if the position is 'left', otherwise set inputKey to 'j' and outputKey to 'k'
     const keyBindings = {
