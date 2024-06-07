@@ -16,6 +16,7 @@ function App() {
     const rightFuzzySelectRef = useRef(null);
 
     useEffect(() => {
+        // put the data transformation logic in a useEffect() so it only runs once
         const transformData = () => {
             const out = [];
 
@@ -41,6 +42,7 @@ function App() {
     }, []);
 
     useEffect(() => {
+        // TODO: handle these keybindings like how they're handled in DataPlotter and HistogramFilter
         const handleKeyDown = (event) => {
             if (event.altKey) {
                 switch (event.key) {
@@ -66,7 +68,6 @@ function App() {
         };
     }, []);
 
-    // Function to render the selected component
     const renderComponent = (type, data, position = 'left') => {
         switch (type) {
             case 'DataPlotter':
@@ -82,6 +83,7 @@ function App() {
         { value: 'DataPlotter', label: 'Data Plotter' },
         { value: 'HistogramFilter', label: 'Histogram Filter' }
     ];
+
     return (
         <div className="App">
             <div className="half-page-plot">
