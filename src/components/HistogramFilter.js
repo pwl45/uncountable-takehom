@@ -87,13 +87,13 @@ function HistogramFilter({ data, position='left'}) {
                 <div className="controls-row">
                     <div className="control-column">
                         <label> 
-                            Range Min: 
+                            Output Range Min:
                             <input type="number" value={rangeMin} onChange={e => setRangeMin(e.target.value)} ref={keyBindings.min.ref} /> 
                         </label> 
                     </div>
                     <div className="control-column">
                         <label> 
-                            Range Max: 
+                            Output Range Max:
                             <input type="number" value={rangeMax} onChange={e => setRangeMax(e.target.value)} ref={keyBindings.max.ref} /> 
                         </label> 
                     </div>

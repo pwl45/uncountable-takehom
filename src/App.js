@@ -9,7 +9,7 @@ function App() {
     const [transformedData, setTransformedData] = useState([]);
     // State variables for selecting the component type
     const [componentType1, setComponentType1] = useState('DataPlotter');
-    const [componentType2, setComponentType2] = useState('DataPlotter');
+    const [componentType2, setComponentType2] = useState('HistogramFilter');
 
     // Refs for the FuzzySelect components
     const leftFuzzySelectRef = useRef(null);
